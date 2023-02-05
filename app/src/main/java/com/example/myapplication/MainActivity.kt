@@ -54,10 +54,10 @@ fun MessageCard(msg: Message) {
         Image(
             painter = painterResource(R.drawable.main_label2),
             contentDescription = "Game label",
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.FillWidth,
             modifier = Modifier
-                .height(300.dp)
-                .fillMaxSize()
+                .height(250.dp)
+                .fillMaxWidth()
         )
         Text(text = "Dota 2 is a multiplayer online battle arena (MOBA) " +
                 "game which has two teams of five players compete to " +
@@ -65,7 +65,7 @@ fun MessageCard(msg: Message) {
                 "the opposing team known as the \"Ancient\", whilst" +
                 " defending their own.",
             color = MaterialTheme.colors.surface,
-            modifier = Modifier.padding(25.dp, 75.dp, 25.dp, 25.dp),
+            modifier = Modifier.padding(25.dp, 100.dp, 25.dp, 25.dp),
             fontFamily = FontFamily(Font(R.font.bai_jamjuree)),
             fontSize = 12.sp
         )
@@ -74,9 +74,10 @@ fun MessageCard(msg: Message) {
                 Image(
                     painter = painterResource(R.drawable.example1),
                     contentDescription = "Example_1",
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillBounds,
                     modifier = Modifier
-                        .height(100.dp)
+                        .height(125.dp)
+                        .width(275.dp)
                         .clip(RoundedCornerShape(16.dp))
                         .padding(horizontal = 25.dp)
                 )
@@ -86,9 +87,10 @@ fun MessageCard(msg: Message) {
                 Image(
                     painter = painterResource(R.drawable.example2),
                     contentDescription = "Example_2",
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillBounds,
                     modifier = Modifier
-                        .height(100.dp)
+                        .height(125.dp)
+                        .width(275.dp)
                         .clip(RoundedCornerShape(25.dp))
                         .padding(horizontal = 25.dp)
                 )
@@ -109,7 +111,7 @@ fun MessageCard(msg: Message) {
     }
 
     Column {
-        Spacer(modifier = Modifier.height(250.dp))
+        Spacer(modifier = Modifier.height(225.dp))
         Image(
             painter = painterResource(R.drawable.logo),
             contentDescription = "Game logo",
@@ -119,7 +121,6 @@ fun MessageCard(msg: Message) {
         )
     }
 }
-
 
 @Preview
 @Composable
